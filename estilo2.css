@@ -1,0 +1,126 @@
+@charset "UTF-8";
+
+* {
+    padding: 0px;
+    margin: 0px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    background-color: #5c6d50;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+}
+
+main {
+    background-image: url(imagens/argila.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center ;
+
+    margin: auto;
+    width: 550px;
+    height: 450px;
+
+    border: 2px solid black;
+    border-radius: 15px;
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Isso empurra o footer para baixo */
+}
+
+.botoes {
+    display: flex;
+    gap: 10px;
+    padding: 3px 10px;
+    border-bottom: 2px solid black;
+    border-radius: 15px 15px 0px 0px;
+    background-color: white;
+}
+
+.icones {
+    display: flex;
+    border: 1px solid black;
+    width: 15px;
+    height: 15px;
+    font-family: monospace;
+    border-radius: 50%;
+    text-align: center;
+    align-items: center;
+    vertical-align: middle;
+    justify-content: center;
+    
+    
+}
+
+main section {
+    padding-left: 25px;
+}
+
+
+h1 {
+    padding: 0px 30px 0px 0px;
+    font-size: 2.5em;
+    font-weight: bold;
+}
+
+p {
+    margin-top: 20px;
+    width: 60%;
+    text-align: justify;
+    line-height: 1.3em;
+    padding: 10px;
+
+}
+
+main > footer {
+    background-color: white;
+    padding: 10px;
+    border-top: 2px solid black;
+    text-align: right;
+    font-size: 2em;
+    font-weight: bold;
+    border-radius: 0px 0px 14px 15px;
+    display: flex; 
+    justify-content: space-between;
+
+}
+
+main > footer a {
+    text-decoration: none;
+    color: black;
+}
+
+footer a:hover {
+    color: #5c6d50;
+}
+
+#seta {
+    display: inline;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
