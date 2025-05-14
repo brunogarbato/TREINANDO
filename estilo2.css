@@ -1,8 +1,9 @@
 @charset "UTF-8";
 
 * {
-    padding: 0px;
-    margin: 0px;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
     font-family: Arial, Helvetica, sans-serif;
 }
 
@@ -20,11 +21,10 @@ main {
     background-image: url(imagens/argila.png);
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: center ;
-
-    margin: auto;
-    width: 550px;
-    height: 450px;
+    width: 90%;
+    max-width: 900px;
+    height: 90%;
+    max-height: 700px;
 
     border: 2px solid black;
     border-radius: 15px;
@@ -33,10 +33,10 @@ main {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    
+
     display: flex;
     flex-direction: column;
-    justify-content: space-between; /* Isso empurra o footer para baixo */
+    justify-content: space-between;
 }
 
 .botoes {
@@ -44,56 +44,57 @@ main {
     gap: 10px;
     padding: 3px 10px;
     border-bottom: 2px solid black;
-    border-radius: 15px 15px 0px 0px;
+    border-radius: 15px 15px 0 0;
     background-color: white;
+    flex-wrap: wrap;
 }
 
 .icones {
     display: flex;
     border: 1px solid black;
-    width: 15px;
-    height: 15px;
-    font-family: monospace;
+    width: 20px;
+    height: 20px;
     border-radius: 50%;
     text-align: center;
     align-items: center;
-    vertical-align: middle;
     justify-content: center;
-    
-    
+    font-family: monospace;
 }
 
 main section {
-    padding-left: 25px;
+    padding: 1rem;
 }
 
-
 h1 {
-    padding: 0px 30px 0px 0px;
-    font-size: 2.5em;
+    font-size: 3em;
     font-weight: bold;
 }
 
 p {
-    margin-top: 20px;
-    width: 60%;
+    margin-top: 1em;
+    width: 100%;
+    max-width: 400px;
     text-align: justify;
-    line-height: 1.3em;
-    padding: 10px;
-
+    letter-spacing: 1px;
+    line-height: 1.5em;
+    padding: 0.8em;
+    background-color: #a8b99ba9;
+    border-radius: 8px;
 }
 
 main > footer {
     background-color: white;
-    padding: 10px;
+    padding: 0.8rem 1rem;
     border-top: 2px solid black;
-    text-align: right;
-    font-size: 2em;
+    font-size: 1.5em;
     font-weight: bold;
-    border-radius: 0px 0px 14px 15px;
-    display: flex; 
-    justify-content: space-between;
+    border-radius: 0 0 14px 14px;
 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
 }
 
 main > footer a {
@@ -105,22 +106,26 @@ footer a:hover {
     color: #5c6d50;
 }
 
-#seta {
-    display: inline;
+/* Media Queries para telas menores */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2em;
+    }
+
+    p {
+        font-size: 0.95em;
+        max-width: 100%;
+    }
+
+    main {
+        width: 95%;
+        height: 70%;
+        max-height: none;
+    }
+
+    main > footer {
+        font-size: 1.2em;
+        flex-direction: row;
+        align-items: flex-start;
+    }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
